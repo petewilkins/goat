@@ -1,7 +1,7 @@
 'use strict'
 
 function Note() {
-  this.text = PLACEHOLDER;
+  this.text = this.PLACEHOLDER;
 };
 
-const PLACEHOLDER = "write your note here you moron"
+Note.prototype.PLACEHOLDER = "write your note here you moron"
