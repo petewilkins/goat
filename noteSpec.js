@@ -4,3 +4,10 @@ function testNoteInstantiateWithPlaceHolder() {
 };
 
 testNoteInstantiateWithPlaceHolder();
+
+function testGetText() {
+  var note = new Note();
+  assert.isTrue(note.getText() === note.PLACEHOLDER);
+};
+
+testGetText();
