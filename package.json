@@ -1,0 +1,23 @@
+{
+  "name": "goat",
+  "version": "1.0.0",
+  "description": "## Collaborators * [Naz Malik](https://github.com/nazwhale) * [Magnus Holm](https://github.com/mghlm) * [Pete Wilkins](https://github.com/petewilkins) * [Colin Turner](https://github.com/colinturner/) * [Jean-Jacques Calbayrac](https://github.com/gekographe/)",
+  "main": "ListModel.js",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petewilkins/goat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petewilkins/goat/issues"
+  },
+  "homepage": "https://github.com/petewilkins/goat#readme"
+}
