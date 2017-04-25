@@ -1,7 +1,9 @@
 function testTakesAModelAsArgument() {
-  var placeHolderList = ['item1']
-  var listNotes = new ListNotes(placeHolderList);
-  console.log(listNotes)
-  assert.isEq(listNotes.displayNotes(), "<ul><li><div> item1 </div></li></ul>");
+  var list = new List();
+
+  list.createNote("hi");
+  var listView = new ListView(list);
+  assert.isEq(listView.displayNotes(), "<ul><li><div> hi </div></li></ul>");
 };
+
 testTakesAModelAsArgument();

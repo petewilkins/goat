@@ -1,15 +1,16 @@
-
 (function(exports) {
 
-  function ListNotes(list) {
+  function ListView(list) {
+    this.list = list;
+  }
 
-    ListNotes.prototype.displayNotes = function() {
-      var arrayLength = list.length;
-      for (var i = 0; i < arrayLength; i++) {
-        console.log("<ul><li><div> " + list[i] + " </div></li></ul>");
-      }
+  ListView.prototype.displayNotes = function() {
+    var historyArray = this.list.history
+    var arrayLength = historyArray.length;
+    for (var i = 0; i < arrayLength; i++) {
+      return "<ul><li><div> " + historyArray[i] + " </div></li></ul>";
     }
   }
 
-  exports.ListNotes = ListNotes;
+  exports.ListView = ListView;
 })(this);
