@@ -15,7 +15,7 @@ testAddingNoteIncreasesLength();
 
 function testCanStoreNoteContentInHistory(){
   var list = new List();
-  input = 'monkey fingers';
+  var input = 'monkey fingers';
   list.createNote(input);
   assert.isEq(list.getHistory()[0], input);
 };
