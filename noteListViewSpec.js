@@ -1,9 +1,12 @@
 function testTakesAModelAsArgument() {
-  var list = new List();
 
-  list.createNote("hi");
-  var listView = new ListView(list);
-  assert.isEq(listView.displayNotes(), "<ul><li><div> hi </div></li></ul>");
+  var listDouble = {
+    history: ['note1']
+  }
+
+  var listView = new ListView(listDouble);
+  assert.isEq(listView.displayNotes(), "<ul><li><div> note1 </div></li></ul>");
+
 };
 
 testTakesAModelAsArgument();
