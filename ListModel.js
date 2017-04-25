@@ -8,9 +8,11 @@
     return this.history;
   }
 
-  List.prototype.addNoteToHistory = function(note){
-    this.history.push(note);
+  List.prototype.createNote = function(text){
+    var note = new Note(text);
+    this.history.push(note.text);
   }
+
 
   exports.List = List;
 })(this);

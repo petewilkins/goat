@@ -1,6 +1,6 @@
 (function(exports) {
-  function Note() {
-    this.text = this.PLACEHOLDER;
+  function Note(text = this.PLACEHOLDER) {
+    this.text = text;
   };
 
   Note.prototype.PLACEHOLDER = "write your note here you moron"
