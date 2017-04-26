@@ -14,7 +14,7 @@
       for (var i = 0; i < arrayLength; i++) {
         listHtmlArray.push("<ul><li><div id='" + (i + 1) + "'> " + historyArray[i] + " </div></li></ul>");
       }
-      return listHtmlArray.join();
+      return listHtmlArray.join("");
     }
   }
 
