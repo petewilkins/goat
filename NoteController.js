@@ -1,21 +1,17 @@
-window.onload = function (){
+(function(exports) {
 
-  (function(exports) {
+  function NoteController(list) {
+    this.list = list;
+    this.changeText();
+  }
 
-    function NoteController() {
-      this.list = new List();
-      this.list.createNote("Colin");
-      this.list.createNote("Pete");
-      this.list.createNote("JJ");
-      var ourListView = new ListView(list);
-    }
+  NoteController.prototype.changeText = function () {
+    var ourListView = new ListView(this.list);
+    var targetDiv = document.getElementById('app');
+    targetDiv.innerHTML = ourListView.displayNotes();
+  }
 
-    NoteController.prototype.changeText = function (list) {
-      var targetDiv = document.getElementById('app');
-      targetDiv.innerHTML = ourListView.displayNotes();
-    }
 
-  exports.NoteController = NoteController;
+exports.NoteController = NoteController;
 
-  })(this);
-}
+})(this);
