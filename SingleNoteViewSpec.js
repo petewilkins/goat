@@ -1,9 +1,11 @@
 function testSingleNoteView() {
-  var listDouble = {
-    history: ['note1', 'note2', 'note3'];
+  var noteDouble = {
+    text: "Favourite drink: seltzer"
   }
+  var singleNote = new SingleNoteView(noteDouble);
 
-  var listView = new ListView(listDouble);
-  assert.isEq(SingleNoteView.view(note1), "<div>Favourite drink: seltzer</div>")
+  assert.isEq(singleNote.showNote(), "<div>Favourite drink: seltzer</div>");
 
 };
+
+testSingleNoteView();
