@@ -1,9 +1,17 @@
-window.onload = function (){
+(function(exports) {
 
-  function changeText() {
-    var targetDiv = document.getElementById('app');
-    targetDiv.innerHTML = 'howdy';
+  function NoteController(list) {
+    this.list = list;
+    this.changeText();
   }
 
-  changeText();
-}
+  NoteController.prototype.changeText = function () {
+    var ourListView = new ListView(this.list);
+    var targetDiv = document.getElementById('app');
+    targetDiv.innerHTML = ourListView.displayNotes();
+  }
+
+
+exports.NoteController = NoteController;
+
+})(this);
