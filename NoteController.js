@@ -1,6 +1,9 @@
-function changeText() {
-  var elem = document.getElementById('app');
-  elem.innerHTML = 'howdy';
-}
+window.onload = function (){
 
-changeText();
+  function changeText() {
+    var targetDiv = document.getElementById('app');
+    targetDiv.innerHTML = 'howdy';
+  }
+
+  changeText();
+}
