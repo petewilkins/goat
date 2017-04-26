@@ -1,14 +1,22 @@
-window.onload = function (){
+(function(exports){
 
-  function changeText() {
-    var targetDiv = document.getElementById('notes');
-    var list = new List();
-    list.createNote('monkey fingers');
-    list.createNote('hippo tails');
-    var listView = new ListView(list);
+  window.onload = function (){
 
-    targetDiv.innerHTML = listView.displayNotes();
+    function NoteController(list){
+      this.list = list;
+    }
+
+    NoteController.prototype.changeText = function(){
+      var targetDiv = document.getElementById('app');
+      var listView = new ListView(list);
+      targetDiv.innerHTML = listView.displayNotes();
+    }
+
+    this.changeText;
+
+    exports.NoteController = NoteController;
+
   }
 
-  changeText();
-}
+})(this);
+
