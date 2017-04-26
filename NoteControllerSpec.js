@@ -10,8 +10,8 @@ function testAppElementContainsCorrectHTML(){
   }
 
   var testDiv = document.getElementById('app');
-  var listView = new ListView(listdouble);
 
+  var listView = new ListView(listdouble);
   new NoteController(listdouble);
 
   assert.isEq(testDiv.innerHTML, '<ul><li><div id="1"> note1 </div></li></ul><ul><li><div id="2"> note2 </div></li></ul><ul><li><div id="3"> note3 </div></li></ul>')
