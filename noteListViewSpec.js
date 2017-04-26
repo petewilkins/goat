@@ -5,7 +5,7 @@ function testTakesAModelAsArgument() {
   }
 
   var listView = new ListView(listDouble);
-  assert.isEq(listView.displayNotes(), "<ul><li><div> note1 </div></li></ul>");
+  assert.isEq(listView.displayNotes(), "<ul><li><div id='1'> note1 </div></li></ul>");
 
 };
 
@@ -27,7 +27,7 @@ function testTakesModelWithMultipleNotesAsArgument() {
   }
 
   var listView = new ListView(listDoubleMultiple)
-  assert.isEq(listView.displayNotes(), "<ul><li><div> note1 </div></li></ul>" + "," + "<ul><li><div> note2 </div></li></ul>" + "," + "<ul><li><div> note3 </div></li></ul>")
+  assert.isEq(listView.displayNotes(), "<ul><li><div id='1'> note1 </div></li></ul>" + "," + "<ul><li><div id='2'> note2 </div></li></ul>" + "," + "<ul><li><div id='3'> note3 </div></li></ul>")
 };
 testTakesAModelAsArgument();
 testTakesModelWithAnEmptyArrayAsArgument();
