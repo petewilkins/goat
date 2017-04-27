@@ -26,7 +26,7 @@ function testNoteLinkedToCorrectUrl(){
   assert.isEq(window.location.href.split("#")[1], "2")
 }
 
-testNoteLinkedToCorrectUrl();
+// testNoteLinkedToCorrectUrl();
 
 function testLoadsCorrectContent(){
   listdouble = {
@@ -37,7 +37,18 @@ function testLoadsCorrectContent(){
   new NoteController(listdouble);
   document.getElementById("2").click();
   assert.isEq(testDiv.innerHTML, 'note2');
+}
+
+// testLoadsCorrectContent();
+
+function testNoteFormOutput() {
+  var textArea = document.getElementById("newnote")
+  textArea.textContent = "this is a test";
+  document.getElementById("addnotebutton").click();
+  var textResult = document.getElementById("newnote").value
+
+  assert.isEq(textArea.textContent, textResult);
 
 }
 
-testLoadsCorrectContent();
+// testNoteFormOutput();

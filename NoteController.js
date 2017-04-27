@@ -3,8 +3,8 @@
   function NoteController(list) {
     this.list = list;
     this.changeText();
-    // this.makeUrlChangeLoadNoteController();
   };
+  // this.makeUrlChangeLoadNoteController();
   //
   // NoteController.prototype.makeUrlChangeLoadNoteController = function(){
   //   window.addEventListener("hashchange", this.showNoteForCurrentPage);
@@ -28,7 +28,14 @@
     var ourListView = new ListView(this.list);
     var targetDiv = document.getElementById('app');
     targetDiv.innerHTML = ourListView.displayNotes();
-  };
+  }
+
+  var newNoteButton = document.getElementById('addnotebutton');
+  newNoteButton.addEventListener("click", function(){
+    list.createNote(document.getElementById('newnote').value);
+    new NoteController(list);
+    event.preventDefault();
+  });
 
 exports.NoteController = NoteController;
 
