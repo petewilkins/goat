@@ -12,7 +12,7 @@
       return "You have no note love.";
     } else {
       for (var i = 0; i < arrayLength; i++) {
-        listHtmlArray.push("<ul><li><div id='" + (i + 1) + "'> " + historyArray[i] + " </div></li></ul>");
+        listHtmlArray.push("<ul><li><a href='#" + (i + 1) + "' id='" + (i + 1) + "'> " + historyArray[i] + " </a></li></ul>");
       }
       return listHtmlArray.join("");
     }
