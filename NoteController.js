@@ -33,7 +33,7 @@
   var newNoteButton = document.getElementById('addnotebutton');
   newNoteButton.addEventListener("click", function(){
     list.createNote(document.getElementById('newnote').value);
-    console.log(list.history);
+    new NoteController(list);
     event.preventDefault();
   });
 
