@@ -27,9 +27,28 @@
       <input id="addnotebutton" type="submit" value="Add Note">
     </form>
 
+    <script>
+      var url = 'https://content.guardianapis.com/search?api-key=';
+      var key = '79da25fe-82d8-4d99-b194-38059f5cf206';
+      console.log(url + key);
+      var urlAndKey = url + key;
+
+      fetch(urlAndKey)
+      .then(res => res.json())
+      .then((out) => {
+        console.log('Chechout this JSON!', out);
+        APIoutput = out;
+      })
+      .catch(err => console.error(err));
+
+      console.log(APIoutput.response.results[0])
+
+    </script>
+
     <script src='TigerScript.js'></script>
     <script src='NoteController.js'></script>
     <script src='NoteControllerSpec.js'></script>
+
   </body>
 
 </html>
