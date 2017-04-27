@@ -28,4 +28,15 @@ function testNoteLinkedToCorrectUrl(){
 
 testNoteLinkedToCorrectUrl();
 
+function testLoadsCorrectContent(){
+  listdouble = {
+    history: ['note1', 'note2', 'note3']
+  }
 
+  var testDiv = document.getElementById('app');
+  new NoteController(listdouble);
+  document.getElementById("2").click();
+  assert.isEq(testDiv.innerHTML, 'note2');
+}
+
+testLoadsCorrectContent();
