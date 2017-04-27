@@ -48,20 +48,23 @@ function testNoteFormOutput() {
 
 function testRunner() {
   testNoteControllerCanBeInstantiated();
-  testAppElementContainsCorrectHTML();
-  testNoteLinkedToCorrectUrl();
 
+  testAppElementContainsCorrectHTML();
+
+  testNoteLinkedToCorrectUrl();
   resetBrowser();
 
   testLoadsCorrectContent();
-  
+  resetBrowser();
+
   testNoteFormOutput();
 }
 
+testRunner();
+
 function resetBrowser(){
-  if window.location !== window.location.href.split('#')[0] {
-    window.location = window.location.href.split('#')[0];
+  var homePage = window.location.href.split('#')[0]
+  if window.location !== homePage {
+    window.location = homePage;
   }
 }
-
-testRunner();
