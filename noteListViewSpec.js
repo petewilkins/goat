@@ -37,7 +37,7 @@ function testAbbreviation() {
   }
 
   var listView = new ListView(listDoubleWithNoteOver20);
-  assert.isEq(listView.displayNotes(), "<ul><li><div id='1'> this is a long note  </div></li></ul>");
+  assert.isEq(listView.displayNotes(), "<ul><li><a href='#1' id='1'> this is a long note  </a></li></ul>");
 }
 
 testTakesAModelAsArgument();
