@@ -22,7 +22,7 @@ function testNoteLinkedToCorrectUrl(){
   }
 
   new NoteController(listdouble);
-  document.getElementById("2").click();
+  // document.getElementById("2").click();
   assert.isEq(window.location.href.split("#")[1], "2")
 }
 
@@ -35,7 +35,7 @@ function testLoadsCorrectContent(){
 
   var testDiv = document.getElementById('app');
   new NoteController(listdouble);
-  document.getElementById("2").click();
+  // document.getElementById("2").click();
   assert.isEq(testDiv.innerHTML, 'note2');
 }
 
