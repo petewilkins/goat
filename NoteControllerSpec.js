@@ -19,3 +19,16 @@ function testAppElementContainsCorrectHTML(){
 
 testAppElementContainsCorrectHTML();
 
+// DO NOT DELETE THIS COMMENT (this test works and should be added to a separate test-file later):
+
+// function testNoteFormOutput() {
+//   var textArea = document.getElementById("newnote")
+//   textArea.textContent = "this is a test";
+//   document.getElementById("addnotebutton").click();
+//   var textResult = document.getElementById("newnote").value
+//
+//   assert.isEq(textArea.textContent, textResult);
+//
+// }
+//
+// testNoteFormOutput();
