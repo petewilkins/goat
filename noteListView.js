@@ -13,7 +13,7 @@
     } else {
       for (var i = 0; i < arrayLength; i++) {
         var abbreviatedNote = historyArray[i].substring(0,20);
-        listHtmlArray.push("<ul><li><div id='" + (i + 1) + "'> " + abbreviatedNote + " </div></li></ul>");
+        listHtmlArray.push("<ul><li><a href='#" + (i + 1) + "' id='" + (i + 1) + "'> " + abbreviatedNode + " </a></li></ul>");
       }
       return listHtmlArray.join("");
     }
