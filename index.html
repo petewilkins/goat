@@ -22,34 +22,12 @@
       Hello
     </div>
 
-    <script>
-
-      makeUrlChangeShowNoteForCurrentPage();
-
-      function makeUrlChangeShowNoteForCurrentPage() {
-        window.addEventListener('hashchange', showNoteForCurrentPage);
-      };
-
-      function showNoteForCurrentPage() {
-        showNote(getNotefromUrl(window.location));
-      };
-
-      function getNotefromUrl(location) {
-        return location.hash.split('#')[1];
-      };
-
-      function showNote(note) {
-        document
-          .getElementById("app")
-          .innerHTML = list.history[note - 1];
-      };
-    </script>
-
     <form id="noteform" action="#addnote" method="post">
       <textarea rows="10" cols="40" id="newnote" name="note" placeholder="Add your note love"></textarea>
       <input id="addnotebutton" type="submit" value="Add Note">
     </form>
 
+    <script src='TigerScript.js'></script>
     <script src='NoteController.js'></script>
     <script src='NoteControllerSpec.js'></script>
   </body>
